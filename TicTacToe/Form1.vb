@@ -43,12 +43,7 @@
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles restartBtn.Click
-        restartBtn.Visible = False
-        game.Init()
         Dim buttons = Controls.OfType(Of Button)
-        For i = 1 To 9
-            buttons(i).Enabled = True
-            buttons(i).Text = ""
-        Next
+        game.Reset(restartBtn, buttons)
     End Sub
 End Class
